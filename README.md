@@ -10,6 +10,10 @@ Simulation VM (MD5 checksum e59b65222d9da143fe13118635caa1d5):
 https://drive.google.com/open?id=1ZN7u_WPUGHsEeos09NITpLImbeU9LKpI
 
 2. Add a host-only adapter in VirtualBox with IP address 192.168.95.1 and 255.255.255.0 netmask (https://www.virtualbox.org/manual/ch06.html#network_hostonly)
+Your VirtualBox settings should look something like the below screenshots.
+![netset3](figures/network_settings3.png)
+![netset1](figures/network_settings1.png)
+![netset2](figures/network_settings2.png)
 
 3. Import each VM into VirtualBox using File->Import Appliance
 
