@@ -31,6 +31,6 @@ Your VirtualBox settings should look something like the below screenshots.
 
 4. Every VM can be logged into with username "user" and password "password"
 
-5. Log into the simulation VM and open 2 terminals. In one, cd into the "simulation" directory and run "./simulation". In the second terminal, cd into the simulation/remote_io directory and run "sudo bash remote_io.sh"
+5. Log into the simulation VM and open 2 terminals. In one, cd into the "simulation" directory and run `./simulation`. In the second terminal, cd into the simulation/remote_io directory and run `sudo bash remote_io.sh`.
 
 6. On the host machine, point your internet browser to the ip address of the simulation VM (default 192.168.95.10) to view the visualization.
