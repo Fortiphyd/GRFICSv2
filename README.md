@@ -1,6 +1,16 @@
 # GRFICSv2
 Version 2 of the Graphical Realism Framework for Industrial Control Simulation (GRFICS)
 
+#### Installing from scratch
+
+1. Download and install the latest version of VirtualBox from https://www.virtualbox.org/wiki/Downloads
+
+2. Create a host-only interface in VirtualBox (https://www.virtualbox.org/manual/ch06.html#network_hostonly)
+
+3. Download an image for both the desktop and server versions of 64-bit Ubuntu 16.04 from http://releases.ubuntu.com/16.04/
+
+4. See instructions for each VM in corresponding directories
+
 #### Pre-built VMs
 
 1. Download VMs:
