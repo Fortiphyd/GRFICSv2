@@ -28,6 +28,7 @@ ScadaBR is both an HMI and historian
 
 ### Usage
 The default username and password are "admin"
+
 Click the "Watchlist" button to view historian data.  Click the "Graphical Views" button to view the HMI.
 
 ![historianHMIIcons](figures/scadaHistAndHMI.PNG)
