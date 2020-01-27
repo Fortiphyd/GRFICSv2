@@ -16,6 +16,7 @@ Version 2 of the Graphical Realism Framework for Industrial Control Simulation (
 1. Download VMs:
 
    - [Simulation VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/EckacBkem-pDqmM8g0vJGUUBTBKX6JKvJPMzw4HWjbT0mw?e=FmLbky)
+   - [HMI VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/EQXZ8QtAXNdGjJggF45J6GYBpu_xhd20WUITNSRIow-3UQ?e=dJ2TGo)
 
 2. [Add a host-only adapter](https://www.virtualbox.org/manual/ch06.html#network_hostonly) in VirtualBox with IP address 192.168.95.1 and 255.255.255.0 netmask.
   Your VirtualBox settings should look something like the below screenshots.
