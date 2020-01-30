@@ -26,6 +26,12 @@ ScadaBR is both an HMI and historian
 
 6. Click "Import"
 
+7. To point ScadaBR to the IP address of the PLC, click on the "Data Source" icon, the "Edit Source" icon, and then edit the IP, as shown in the below screenshots
+
+![dataSource](figures/dataSourcesHighlighted.PNG)
+
+![IP](figures/scadaIPHighlighted.PNG)
+
 ### Usage
 The default username and password are "admin"
 
