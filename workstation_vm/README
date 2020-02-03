@@ -1,1 +1,11 @@
-Files for Linux workstation
+Linux Workstation Ubuntu 16.04 Desktop
+Purpose - To program the PLC
+
+Installation
+Follow the instructions here to download the OpenPLC Editor for Linux
+https://www.openplcproject.com/plcopen-editor
+
+NOTE - Running the install.sh script does not seem to install all necessary dependencies. 
+To fix this, install the missing packages with
+'sudo apt-get install python-zeroconf python-lxml python-matplotlib'
+'pip2 install six numpy==1.14.6'
