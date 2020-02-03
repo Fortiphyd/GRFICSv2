@@ -1,7 +1,7 @@
 ### Installation
 
 #### Simulation
-1. Install jsoncpp: `sudo apt-get install libjsoncpp-dev`
+1. Install jsoncpp and lapacke: `sudo apt-get install libjsoncpp-dev liblapacke-dev`
 2. Go to the simulation folder: `cd ~/GRFICSv2/simulation_vm/simulation`
 3. Compile: `sudo make`
 
