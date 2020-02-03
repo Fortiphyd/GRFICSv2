@@ -31,7 +31,7 @@ void* simulation(void *ptr) {
         pthread_mutex_lock(&simulation_lock);
         my_te->update(inputs);
         outputs = my_te->get_state_json();
-        //my_te->print_outputs();
+        my_te->print_outputs();
         pthread_mutex_unlock(&simulation_lock);       
         
         usleep(process_rate);
