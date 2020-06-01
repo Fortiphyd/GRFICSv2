@@ -54,7 +54,14 @@ def updating_writer(a):
     valve_pos = int(data["state"]["purge_valve_pos"]/100.0*65535)
     flow = int(data["outputs"]["purge_flow"]/500.0*65535)
     print data
-
+    if valve_pos > 65535:
+        valve_pos = 65535
+    elif valve_pos < 0:
+        valve_pos = 0
+    if flow > 65535:
+        flow = 65535
+    elif flow < 0:
+        flow = 0
     # import pdb; pdb.set_trace()
     context[slave_id].setValues(4, 1, [valve_pos,flow])
 

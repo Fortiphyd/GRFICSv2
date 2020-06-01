@@ -6,7 +6,7 @@ double VLmax=30.0e0;
 double Rgas=8.314e0;
 double Tgas=373.0e0;
 double Lden = 8.3e0;
-double cv[4] = {3.3046, 0.2246, 0.00352, 0.0417};
+double cv[4] = {6.4046, 0.4246, 0.352, 0.0417};
 uint64_t tpurge;
 TE::TE() {
     gettimeofday(&current, NULL);
@@ -93,7 +93,7 @@ void TE::steady_state() {
     
     molar_D = 110;
     liquid_level = molar_D/8.3;
-    double VV = 122-liquid_level;
+    double VV = VT-liquid_level;
     double NV = pressure*VV/(8.314*373);
     molar_A = NV*A_in_purge;
     molar_B = NV*B_in_purge;
@@ -191,8 +191,8 @@ void TE::update(Json::Value inputs) {
     
 
     dxdt_molar_A = ya1*f1_flow + f2_flow - A_in_purge*purge_flow - RR1;
-    dxdt_molar_B = yb1*f1_flow + B_in_purge*purge_flow;
-    dxdt_molar_C = yc1*f1_flow + C_in_purge*purge_flow - RR1;
+    dxdt_molar_B = yb1*f1_flow - B_in_purge*purge_flow;
+    dxdt_molar_C = yc1*f1_flow - C_in_purge*purge_flow - RR1;
     dxdt_molar_D = RR1 - product_flow;
     
     
