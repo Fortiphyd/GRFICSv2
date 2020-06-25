@@ -39,8 +39,8 @@ In addition to the HMI, this VM also contains the PLCOpenEditor software used to
 
    - [Simulation VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/EWK5ShJyLTxBuVDuw93V7YYB5aH5veQAq_VaKAXyIIpCOQ?e=b9PEEs)
    - [HMI VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/EQXZ8QtAXNdGjJggF45J6GYBpu_xhd20WUITNSRIow-3UQ?e=dJ2TGo)
-   - [pfsense VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/ETCyfk-Xfd1Gr9HBYAXT5ssBpuYS4PvTIy7-00ukCRI1EA?e=vMV63e)
-   - [PLC VM]
+   - [pfsense VM]
+   - [PLC VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/ETCyfk-Xfd1Gr9HBYAXT5ssBpuYS4PvTIy7-00ukCRI1EA?e=vMV63e)
 
 2. [Add 2 a host-only adapters](https://www.virtualbox.org/manual/ch06.html#network_hostonly) in VirtualBox:
     - VirtualBox Host-Only Ethernet Adapter #2: 192.168.95.1 and 255.255.255.0 netmask
