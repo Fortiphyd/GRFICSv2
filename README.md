@@ -37,7 +37,7 @@ In addition to the HMI, this VM also contains the PLCOpenEditor software used to
 
 1. Download VMs:
 
-   - [Simulation VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/EX1dehhUo0ZJrdIjFyjngQ4B7khfnl1avUfWMRzwQ3MvUQ?e=uURdXd)
+   - [Simulation VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/EX1dehhUo0ZJrdIjFyjngQ4B7khfnl1avUfWMRzwQ3MvUQ?e=uURdXd) MD5 Checksum: 4e8c3072def651b7fa47dae566177eb6
    - [HMI VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/EQXZ8QtAXNdGjJggF45J6GYBpu_xhd20WUITNSRIow-3UQ?e=dJ2TGo)
    - [pfsense VM]
    - [PLC VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/ETCyfk-Xfd1Gr9HBYAXT5ssBpuYS4PvTIy7-00ukCRI1EA?e=vMV63e)
