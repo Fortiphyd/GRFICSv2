@@ -8,4 +8,5 @@
 
 #### Web Visualization
 1. Install php and apache2: `sudo apt install apache2 php libapache2-mod-php`
-2. Create a symlink to the apache folder `sudo ln -s ~/GRFICSv2/simulation_vm/web_visualization/* /var/www/html`
+2. Remove existing index.html: `sudo rm /var/www/html/index.html`
+3. Create a symlink to the apache folder `sudo ln -s ~/GRFICSv2/simulation_vm/web_visualization/* /var/www/html`
