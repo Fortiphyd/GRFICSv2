@@ -2,8 +2,9 @@
 
 #### Simulation
 1. Install jsoncpp, lapacke, pymodbus: `sudo apt-get install libjsoncpp-dev liblapacke-dev python-pymodbus`
-2. Go to the simulation folder: `cd ~/GRFICSv2/simulation_vm/simulation`
-3. Compile: `sudo make`
+2. Install gcc and make: `sudo apt-get install build-essential`
+3. Go to the simulation folder: `cd ~/GRFICSv2/simulation_vm/simulation`
+4. Compile: `sudo make`
 
 #### Web Visualization
 1. Install php and apache2: `sudo apt install apache2 php libapache2-mod-php`
