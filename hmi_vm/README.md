@@ -8,7 +8,7 @@ ScadaBR is both an HMI and historian
 ![historian](figures/scadaHistorianScaled.PNG)
 
 ### Installation
-1. [Install ScadaBR on a virtual machine](https://www.openplcproject.com/reference-installing-scadabr)
+1. [Install ScadaBR on a virtual machine](https://www.openplcproject.com/reference-installing-scadabr), being sure to use a Bridged Adapter for the network adapter.
 
 2. On your host machine, point your browser to the ScadaBR web interface.  The URL should be displayed on your ScadaBR virtual machine terminal
 
