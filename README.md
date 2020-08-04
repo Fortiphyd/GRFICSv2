@@ -49,13 +49,10 @@ The firewall VM provides routing and firewall features between the DMZ and ICS n
     - VirtualBox Host-Only Ethernet Adapter #2: 192.168.95.111 and 255.255.255.0 netmask
     - VirtualBox Host-Only Ethernet Adapter #3: 192.168.90.111 and 255.255.255.0 netmask
 
-  Your VirtualBox settings should look something like the below screenshots.
+  Your VirtualBox settings should look something like the below screenshot.
 
-  ![netset3](figures/network_settings3.PNG)
+  ![netset3](figures/vb_networking.png)
 
-  ![netset1](figures/network_settings1.PNG)
-
-  ![netset2](figures/network_settings2.PNG)
 
 3. Import each VM into VirtualBox using File->Import Appliance
 
