@@ -11,14 +11,16 @@ ScadaBR is both an HMI and historian
 1. [Install ScadaBR on a Debian server virtual machine](https://www.openplcproject.com/reference-installing-scadabr), first using a NAT adapter to make installation easier.
 
 2. Power the VM off and change the network adapter to the host-only 192.168.90.0/24 network. Set the static IP address to 192.168.90.5 by using `sudo nano /etc/network/interfaces` and making the file look like 
-`auto lo
+```
+auto lo
 iface lo inet loopback
 
 allow-hotplug enp0s3
 iface enp0s3 inet static
 address 192.168.90.5
 netmask 255.255.255.0
-up route add -net 192.168.95.0 netmask 255.255.255.0 gw 192.168.90.100`
+up route add -net 192.168.95.0 netmask 255.255.255.0 gw 192.168.90.100
+```
 
 Note that the last line is necessary for the VM to know how to route through the pfSense router.
 
