@@ -24,7 +24,7 @@ Note that the last line is necessary for the VM to know how to route through the
 
 3. On your host machine, point your browser to the ScadaBR web interface.  The URL should be displayed on your ScadaBR virtual machine terminal
 
-![url](figures/scadaURL.PNG)
+![url](figures/scadaURL.png)
 
 4. Click the "Import/Export" icon
 
