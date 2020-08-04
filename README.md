@@ -45,9 +45,9 @@ The firewall VM provides routing and firewall features between the DMZ and ICS n
    - [pfsense VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/dformby_fortiphyd_com/ETe9GfHNkOZKh2YuL7oMd1UBs8zhnqmGnqoODuTy2q8alg?e=GqTHB6) - MD5=521745220cd2f6e268eb188934d6b0ad
    - [PLC VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/ETCyfk-Xfd1Gr9HBYAXT5ssBpuYS4PvTIy7-00ukCRI1EA?e=vMV63e)
 
-2. [Add 2 a host-only adapters](https://www.virtualbox.org/manual/ch06.html#network_hostonly) in VirtualBox:
-    - VirtualBox Host-Only Ethernet Adapter #2: 192.168.95.1 and 255.255.255.0 netmask
-    - VirtualBox Host-Only Ethernet Adapter #3: 192.168.90.1 and 255.255.255.0 netmask
+2. [Add 2 host-only adapters](https://www.virtualbox.org/manual/ch06.html#network_hostonly) in VirtualBox:
+    - VirtualBox Host-Only Ethernet Adapter #2: 192.168.95.111 and 255.255.255.0 netmask
+    - VirtualBox Host-Only Ethernet Adapter #3: 192.168.90.111 and 255.255.255.0 netmask
 
   Your VirtualBox settings should look something like the below screenshots.
 
