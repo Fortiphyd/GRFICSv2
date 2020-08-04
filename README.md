@@ -57,7 +57,7 @@ The firewall VM provides routing and firewall features between the DMZ and ICS n
 3. Import each VM into VirtualBox using File->Import Appliance
 
 4. VM credentials
-    - Simulation (Chemical Plant): user | password
+    - Simulation (Chemical Plant): simulation | Fortiphyd
     - HMI (ScadaBR): scadabr | scadabr    web console: admin | admin
     - Pfsense: admin | pfsense
     - PLC: user | password
