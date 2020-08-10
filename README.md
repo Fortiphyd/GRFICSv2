@@ -26,6 +26,10 @@ The HMI VM primarily contains an operator HMI created using the free ScadaBR sof
 
 The firewall VM provides routing and firewall features between the DMZ and ICS network. The WAN interface is on the DMZ subnet (192.168.90.0/24) at 192.168.90.100 and the LAN interface is on the ICS subnet (192.168.95.0/24) at 192.168.95.1
 
+### Engineering Workstation
+
+The workstation VM is an Ubuntu 16.04 machine with software used for programming the OpenPLC. The workstation is located in the ICS network (192.168.95.0/24) at 192.168.95.5.
+
 #### Installing from scratch
 
 1. Download and install the latest version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
