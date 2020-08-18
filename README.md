@@ -44,11 +44,11 @@ The workstation VM is an Ubuntu 16.04 machine with software used for programming
 
 1. Download VMs:
 
-   - [Simulation VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/dformby_fortiphyd_com/EaBeAxbF6xtEumdsJ7npVz0BeECJnseAMsfAbaLwV3sKOg?e=eocedW) - MD5=8712865585e96c87f84a158b3cc5ad32
+   - [Simulation VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/dformby_fortiphyd_com/EaBeAxbF6xtEumdsJ7npVz0BeECJnseAMsfAbaLwV3sKOg?e=JRvkcS) - MD5=02af6c2502ecaab6c6d138deb560b27d
    - [HMI VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/dformby_fortiphyd_com/Eacy2_AyKsNHsebSady0fGMB95li29AVnQxjHiu89XXpEQ?e=WZxsx0) - MD5=411a95bf884c67d23d44674521671524
    - [pfsense VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/dformby_fortiphyd_com/ETe9GfHNkOZKh2YuL7oMd1UBs8zhnqmGnqoODuTy2q8alg?e=GqTHB6) - MD5=521745220cd2f6e268eb188934d6b0ad
-   - [PLC VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/sbryce_fortiphyd_com/ETCyfk-Xfd1Gr9HBYAXT5ssBpuYS4PvTIy7-00ukCRI1EA?e=vMV63e) - MD5=378edfce3cf65d535ac49f4c4d95f90a
-   - [Workstation](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/dformby_fortiphyd_com/EcZuc0Xu7WRBjhIhwWH2MjkBeZ4W1S-k6m4m7Nuk_RHpdQ?e=iBn7X2) - MD5=bd56c2b9c374ea0928df943c0884614c
+   - [PLC VM](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/dformby_fortiphyd_com/ER0pG_X5IRNCg477jf2ppo8BdN0t13t9vrNBH92_oOWOHA?e=hNeJ88) - MD5=332a7db7eb7a8fa43ab54cd66c69a1a3
+   - [Workstation](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/dformby_fortiphyd_com/EcZuc0Xu7WRBjhIhwWH2MjkBeZ4W1S-k6m4m7Nuk_RHpdQ?e=kHhX7y) - MD5=2789a600a03136d7a3a12be5bdd36c06
 
 2. [Add 2 host-only adapters](https://www.virtualbox.org/manual/ch06.html#network_hostonly) in VirtualBox:
     - VirtualBox Host-Only Ethernet Adapter #2: 192.168.95.111 and 255.255.255.0 netmask
