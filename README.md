@@ -67,8 +67,8 @@ The workstation VM is an Ubuntu 16.04 machine with software used for programming
     - Pfsense: admin | pfsense
     - PLC: user | password
 
-5. Log into the simulation VM and open 2 terminals. In one, cd into the "simulation" directory and run `./simulation`. In the second terminal, cd into the "simulation/remote_io/modbus" directory and run `sudo bash run_all.sh`.
+5. If you downloaded a VM, the simulation scripts should start on boot. If not, log into the simulation VM and open 2 terminals. In one, cd into the "simulation" directory and run `./simulation`. In the second terminal, cd into the "simulation/remote_io/modbus" directory and run `sudo bash run_all.sh`.
 
-6. Log into plc VM, cd into the OpenPLC_v2 directory, and run "sudo nodejs server.js"
+6. If you downloaded a VM, the PLC should start on boot. If not, log into plc VM, cd into the OpenPLC_v2 directory, and run "sudo nodejs server.js"
 
-7. On the host machine, set your network connection manually. IP: 192.168.90.51 Netmask: 255.255.255.0 Gateway: 192.168.90.200. Then, point your internet browser to the ip address of the simulation VM (default 192.168.95.10) to view the visualization.
+7. Point your internet browser to the ip address of the simulation VM (default 192.168.95.10) to view the visualization.
