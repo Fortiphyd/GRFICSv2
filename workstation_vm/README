@@ -9,3 +9,6 @@ NOTE - Running the install.sh script does not seem to install all necessary depe
 To fix this, install the missing packages with
 'sudo apt-get install python-zeroconf python-lxml python-matplotlib'
 'pip2 install six numpy==1.14.6'
+
+
+In the Ubuntu network settings, add a route to 192.168.90.0 netmask 255.255.255.0 through 192.168.95.1
