@@ -3,7 +3,7 @@ Version 2 of the Graphical Realism Framework for Industrial Control Simulation (
 
 ### Overview
 
-This version of GRFICS is organized as 4 VirtualBox VMs (a 3D simulation, a soft PLC, a HMI, and a pfsense firewall) communicating with each other on a host-only virtual networks. For a more detailed explanation of the entire framework and some background information on ICS networks, please refer to the workshop paper located at https://www.usenix.org/conference/ase18/presentation/formby
+This version of GRFICS is organized as 5 VirtualBox VMs (a 3D simulation, a soft PLC, an HMI, a pfsense firewall, and a workstation) communicating with each other on host-only virtual networks. For a more detailed explanation of the entire framework and some background information on ICS networks, please refer to the workshop paper located at https://www.usenix.org/conference/ase18/presentation/formby
 
 A video series walking through VM setup and example attacks is available on the Fortiphyd YouTube channel at 
 https://www.youtube.com/playlist?list=PL2RSrzaDx0R670yPlYPqM51guk3bQjFG5
@@ -12,22 +12,22 @@ A commercial version of GRFICS with more scenarios, advanced features, and strea
 
 ### Simulation
 
-The simulation VM runs a realistic simulation of a chemical process reaction that is controlled and monitored by simulated remote IO devices through a simple JSON API. These remote IO devices are then monitored and controlled by the PLC VM using the Modbus protocol. This VM is located in the ICS network subnet (192.168.95.0/24) with the IP addresses 192.168.95.10-192.168.95.15
+The simulation VM (named ChemicalPlant) runs a realistic simulation of a chemical process reaction that is controlled and monitored by simulated remote IO devices through a simple JSON API. These remote IO devices are then monitored and controlled by the PLC VM using the Modbus protocol. This VM is located in the ICS network subnet (192.168.95.0/24) with the IP addresses 192.168.95.10-192.168.95.15
 ![simulation](figures/simulation.png)
 
 ### Programmable Logic Controller
 
-The PLC VM is a modified version of OpenPLC (https://github.com/thiagoralves/OpenPLC_v2) that uses an older version of the libmodbus library with known buffer overflow vulnerabilities. This VM is located in the ICS network subnet (192.168.95.0/24) at 192.168.95.2
+The PLC VM (named plc_2) is a modified version of OpenPLC (https://github.com/thiagoralves/OpenPLC_v2) that uses an older version of the libmodbus library with known buffer overflow vulnerabilities. This VM is located in the ICS network subnet (192.168.95.0/24) at 192.168.95.2
 
 ### Human Machine Interface
 
-The HMI VM primarily contains an operator HMI created using the free ScadaBR software. This HMI is used to monitor the process measurements being collected by the PLC and send commands to the PLC. This VM is located in the DMZ network subnet (192.168.90.0/24) at 192.168.90.5
+The HMI VM (named ScadaBR) primarily contains an operator HMI created using the free ScadaBR software. This HMI is used to monitor the process measurements being collected by the PLC and send commands to the PLC. This VM is located in the DMZ network subnet (192.168.90.0/24) at 192.168.90.5
 ![hmi](figures/hmi.png)
 
 
 ### PfSense Firewall/Router
 
-The firewall VM provides routing and firewall features between the DMZ and ICS network. The WAN interface is on the DMZ subnet (192.168.90.0/24) at 192.168.90.100 and the LAN interface is on the ICS subnet (192.168.95.0/24) at 192.168.95.1
+The firewall VM (named pfSense) provides routing and firewall features between the DMZ and ICS network. The WAN interface is on the DMZ subnet (192.168.90.0/24) at 192.168.90.100 and the LAN interface is on the ICS subnet (192.168.95.0/24) at 192.168.95.1
 
 ### Engineering Workstation
 
@@ -54,24 +54,36 @@ The workstation VM is an Ubuntu 16.04 machine with software used for programming
    - [Workstation](https://netorgft4230013-my.sharepoint.com/:u:/g/personal/dformby_fortiphyd_com/EcZuc0Xu7WRBjhIhwWH2MjkBeZ4W1S-k6m4m7Nuk_RHpdQ?e=kHhX7y) - MD5=68c21a9057d68c637c358b05f1f816e8
 
 2. [Add 2 host-only adapters](https://www.virtualbox.org/manual/ch06.html#network_hostonly) in VirtualBox:
-    - VirtualBox Host-Only Ethernet Adapter #2: 192.168.95.111 and 255.255.255.0 netmask
-    - VirtualBox Host-Only Ethernet Adapter #3: 192.168.90.111 and 255.255.255.0 netmask
+    - VirtualBox Host-Only Ethernet Adapter: 192.168.90.111 and 255.255.255.0 netmask
+    - VirtualBox Host-Only Ethernet Adapter: 192.168.95.111 and 255.255.255.0 netmask
 
-  Your VirtualBox settings should look something like the below screenshot.
+  Your VirtualBox settings should look something like the below screenshot, although the names will likely differ.
 
   ![netset3](figures/vb_networking.png)
 
 
 3. Import each VM into VirtualBox using File->Import Appliance
 
-4. VM credentials
+4. Go into each VM's network settings, and attach each adapter to the correct network:
+
+   - plc_2 Adapter 1 => 192.168.95.0/24
+   - ScadaBR Adapter 1 => 192.168.90.0/24
+   - ChemPlant Adapter 2 => 192.168.95.0/24
+   - workstation Adapter 1 => 192.168.95.0/24
+   - pfSense Adapter 1 => 192.168.90.0/24
+   - pfSense Adapter 2 => 192.168.95.0/24
+
+5. Start all the VMs.
+
+6. VM credentials
     - Simulation (Chemical Plant): simulation | Fortiphyd
     - HMI (ScadaBR): scadabr | scadabr    web console: admin | admin
     - Pfsense: admin | pfsense
     - PLC: user | password
+    - Workstation: workstation | password
 
-5. If you downloaded a VM, the simulation scripts should start on boot. If not, log into the simulation VM and open 2 terminals. In one, cd into the "simulation" directory and run `./simulation`. In the second terminal, cd into the "simulation/remote_io/modbus" directory and run `sudo bash run_all.sh`.
+7. If you downloaded a VM, the simulation scripts should start on boot. If not, log into the simulation VM and open 2 terminals. In one, cd into the `~/GRFICSv2/simulation_vm/simulation` directory and run `./simulation`. In the second terminal, cd into the `~/GRFICSv2/simulation_vm/simulation/remote_io/modbus` directory and run `sudo bash run_all.sh`.
 
-6. If you downloaded a VM, the PLC should start on boot. If not, log into plc VM, cd into the OpenPLC_v2 directory, and run "sudo nodejs server.js"
+8. If you downloaded a VM, the PLC should start on boot. If not, log into plc VM, cd into the OpenPLC_v2 directory, and run `sudo nodejs server.js`
 
-7. Point your internet browser to the ip address of the simulation VM (default 192.168.95.10) to view the visualization.
+9. Point your internet browser to the IP address of the simulation VM (default 192.168.95.10) to view the visualization.
