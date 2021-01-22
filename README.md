@@ -82,7 +82,7 @@ The workstation VM is an Ubuntu 16.04 machine with software used for programming
     - PLC: user | password
     - Workstation: workstation | password
 
-7. If you downloaded a VM, the simulation scripts should start on boot. If not, log into the simulation VM and open 2 terminals. In one, cd into the `~/GRFICSv2/simulation_vm/simulation` directory and run `./simulation`. In the second terminal, cd into the `~/GRFICSv2/simulation_vm/simulation/remote_io/modbus` directory and run `sudo run_all.sh`.
+7. If you downloaded a VM, the simulation scripts should start on boot. If not, log into the simulation VM and open 2 terminals. In one, cd into the `~/GRFICSv2/simulation_vm/simulation` directory and run `./simulation`. In the second terminal, cd into the `~/GRFICSv2/simulation_vm/simulation/remote_io/modbus` directory and run `sudo bash run_all.sh`.
 
 8. If you downloaded a VM, the PLC should start on boot. If not, log into plc VM, cd into the OpenPLC_v2 directory, and run `sudo nodejs server.js`
 
