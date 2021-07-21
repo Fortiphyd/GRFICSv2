@@ -73,7 +73,11 @@ The workstation VM is an Ubuntu 16.04 machine with software used for programming
    - pfSense Adapter 1 => 192.168.90.0/24
    - pfSense Adapter 2 => 192.168.95.0/24
 
-5. Start all the VMs.
+5. Start all the VMs. Attention, it is important to follow a boot order for the vm:
+   - First start the VMs in the 192.168.95.0/24 subnet including pfSense and wait for the completation of the boot procedure
+   - Then start the ScadaBR VM
+  
+  If for some reason you start first ScadaBR and then the other VMs, the HMI could not be able to retrive data from the Chemical Plant. In this case you can log in the Chemical   Plant VM and run run_all.sh in ~/GRIFICSv2/simulation_vm/simulation/remote_io/modbus.
 
 6. VM credentials
     - Simulation (Chemical Plant): simulation | Fortiphyd
