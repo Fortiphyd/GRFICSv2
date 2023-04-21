@@ -59,7 +59,7 @@ def updating_writer(a):
     level = int(data["outputs"]["liquid_level"]/100.0*65535)
     if pressure > 65535:
         pressure = 65535
-    if level > 65525:
+    if level > 65535:
         level = 65535
     print data
 
