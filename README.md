@@ -1,6 +1,9 @@
 # GRFICSv2
 Version 2 of the Graphical Realism Framework for Industrial Control Simulation (GRFICS)
 
+NOTE - Version 3 is NOW AVAILABLE at https://github.com/Fortiphyd/GRFICSv3
+Version 2 will continue with only limited support
+
 ### Overview
 
 This version of GRFICS is organized as 5 VirtualBox VMs (a 3D simulation, a soft PLC, an HMI, a pfsense firewall, and a workstation) communicating with each other on host-only virtual networks. For a more detailed explanation of the entire framework and some background information on ICS networks, please refer to the workshop paper located at https://www.usenix.org/conference/ase18/presentation/formby
